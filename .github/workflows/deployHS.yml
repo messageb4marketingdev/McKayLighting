@@ -1,0 +1,17 @@
+on:
+  push:
+    branches:
+    - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.3
+      - name: HubSpot Deploy Action
+        uses: HubSpot/hubspot-cms-deploy-action@v1.3
+        with:
+          src_dir: McKayLighting
+          dest_dir: McKayLighting          
+          portal_id: ${{ secrets.HubSpotPortalId }}
+          personal_access_key: ${{ secrets.HubSpotPersonalKey }}
