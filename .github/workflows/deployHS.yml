@@ -11,7 +11,7 @@ jobs:
       - name: HubSpot Deploy Action
         uses: HubSpot/hubspot-cms-deploy-action@v1.3
         with:
-          src_dir: McKayLighting
+          src_dir: MCKAYLIGHTING
           dest_dir: McKayLighting          
           portal_id: ${{ secrets.HubSpotPortalId }}
           personal_access_key: ${{ secrets.HubSpotPersonalKey }}
